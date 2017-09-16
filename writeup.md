@@ -18,7 +18,6 @@ The goals / steps of this project are the following:
 
 ### Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
 I have defined several functions to solve this problem. The first one was for lane detection. In this function, I have converted the image to HLS color space since it is easier to seperate bright colors such as white and yellow in HLS. I have applied threshold to only luminosity value 200 since most of the time lanes have the brightest colors. Then I've applied a mask to only get the lines in the region of the interest and remove the unnecessary parts of the image to reduce cpu workload. After that, I've used canny function has been used to find the edges. With hough function, only several lanes are left to interpolate.
 
 ![alt text][image1]
